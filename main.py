@@ -14,21 +14,6 @@ from core.loadingGUI import loading_gui
 import os
 
 def main():
-    """
-    Main function to run the Pokemon Card Draw Game.
-    It initializes the game, loads the Pokemon list, and handles user input.
-    """
-    # Create data directory if it doesn't exist
-    if not os.path.exists("data"):
-        os.makedirs("data")
-    
-    # Create JSON file if it doesn't exist
-    if not os.path.exists("data/pokemon_list.json"):
-        with open("data/pokemon_list.json", "w", encoding="utf-8") as f:
-            f.write("[]")
-
-    
-    # Initialize loading GUI
     loading_gui()
     welcome()
     pokemon_list = load_pokemon_list()

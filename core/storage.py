@@ -1,23 +1,13 @@
-"""
-    Storage module for Pokémon data management.
-    This module provides functions to load Pokémon data from a JSON file,
-    check for duplicates, and manage the Pokémon list.
-"""
-import json
 import time
-
-POKEMON_LIST_PATH = "data/pokemon_list.json"
-
+from core.server_api import list_pokemon
+import requests
 
 def load_pokemon_list():
-    """
-    Load the Pokémon list from a JSON file.
-    """
     try:
-        with open(POKEMON_LIST_PATH, "r", encoding="utf-8") as f:
-            return json.load(f)
-    except FileNotFoundError:
-        return []
+        my_pokemon_list = list_pokemon()            # pulls from Mongo
+    except requests.RequestException as err:
+        print("Could not reach the Pokémon API:", err)
+        my_pokemon_list = []                        # start empty if offline
 
 
 def check_duplicate(pokemon_id, data):

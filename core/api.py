@@ -1,15 +1,7 @@
-"""
-    Storage module for Pokémon data management.
-    This module provides functions to load Pokémon data from a JSON file,
-    check for duplicates, and manage the Pokémon list.
-"""
-import json
 import requests
 from core.display import show_pokemon
 import metadata
-from core.dynamoUpdate import update_dynamo_db
-
-POKEMON_LIST_PATH = "data/pokemon_list.json"
+from core import server_api
 
 
 def get_basic_pokemon_info(pokemon_id, my_pokemon_list):
@@ -37,10 +29,9 @@ def get_basic_pokemon_info(pokemon_id, my_pokemon_list):
     show_pokemon(pokemon_info)
     my_pokemon_list.append(pokemon_info)
 
-    with open(POKEMON_LIST_PATH, "w", encoding="utf-8") as f:
-        json.dump(my_pokemon_list, f, indent=4)
 
-    print("\nPokémon saved to pokemon_list.json")
 
-    update_dynamo_db()
+
+    server_api.save_pokemon(pokemon_info)
+
     print(f"Pokémon {pokemon_info['name']} added to your collection.")
