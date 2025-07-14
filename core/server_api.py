@@ -7,7 +7,7 @@ import os
 import requests
 
 # set this in ~/.bashrc or a .env file so you don’t hard-code IPs
-BASE_URL = os.getenv("POKE_API_URL", "http://172.31.45.119:5000")
+BASE_URL = os.getenv("POKE_API_URL", "http://172.31.45.214:5000")
 
 
 def save_pokemon(pokemon: dict) -> None:
