@@ -7,7 +7,7 @@ def welcome():
         Display a welcome message to the user.
     """
     print("\n*** Welcome to the Pokémon API ***")
-
+    print("\n Use this command to test:\n'curl -s http://$PRIVATE_IP_DB:5000/pokemon'\nto see the Pokémon collection.")
 
 def ask_draw():
     """
