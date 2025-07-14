@@ -7,7 +7,8 @@ import os
 import requests
 
 # set this in ~/.bashrc or a .env file so you don’t hard-code IPs
-BASE_URL = os.getenv("POKE_API_URL", "http://172.31.45.214:5000")
+PRIVATE_IP_DB = os.environ["PRIVATE_IP_DB"]
+BASE_URL = f"http://{PRIVATE_IP_DB}:5000"
 
 
 def save_pokemon(pokemon: dict) -> None:
