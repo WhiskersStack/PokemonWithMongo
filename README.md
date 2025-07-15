@@ -1,55 +1,55 @@
-# 🎮 Pokémon Card Draw Game
+# 🃏 Pokémon Card Draw Game
 
 [![Python](https://img.shields.io/badge/Built%20With-Python-3776AB?logo=python)](https://www.python.org/)
 [![GUI](https://img.shields.io/badge/Interface-GUI-blueviolet)]()
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-A standalone desktop-based Pokémon card draw game written in Python. Users can draw cards, check for duplicates, and track history — all within a simple graphical user interface (GUI).
+A lightweight, standalone Pokémon card draw game built with Python. Users can randomly draw Pokémon cards, avoid duplicates, and track drawn cards — all through a simple, clean desktop GUI.
 
 ---
 
-## ⚙️ Features
+## ✨ Key Features
 
-* 🃏 Draw random Pokémon cards
-* 🚫 Duplicate-checking logic
-* 💾 Local in-memory tracking
-* 🖥️ Simple GUI interface (no web browser required)
-* 🧠 Modular architecture with dedicated logic and display layers
+* 🎴 Draw a random Pokémon card
+* ❌ Automatically avoids duplicates
+* 💾 Tracks drawn cards in-memory
+* 🖥️ Lightweight GUI (no browser needed)
+* 🧩 Modular design: separate logic, display, and data handling
 
 ---
 
-## 🏗️ Project Structure
+## 🗂️ Project Structure
 
 ```bash
 PokemonWithMongo/
-├── core/                    # Core game and GUI modules
-│   ├── api.py              # Pokémon data handling logic
-│   ├── server_api.py       # External API or mock logic
-│   ├── display.py          # Main display elements
-│   ├── loadingGUI.py       # Startup/loading screen
-│   └── storage.py          # Card tracking / duplicate detection
-├── main.py                 # Application entry point
-├── metadata.py             # Project-level metadata
-├── global_var_init.sh      # Optional shell init script
+├── core/                    # Game logic and GUI modules
+│   ├── api.py              # Pokémon data logic
+│   ├── server_api.py       # Optional external/mock API logic
+│   ├── display.py          # Main visual interface
+│   ├── loadingGUI.py       # Splash/loading animations
+│   └── storage.py          # Duplicate check + card memory
+├── main.py                 # Application launcher
+├── metadata.py             # Game metadata and info
+├── global_var_init.sh      # Optional shell initialization script
 └── .gitignore
 ```
 
 ---
 
-## 🚀 How to Run
+## 🚀 Getting Started
 
-### 🧪 Requirements
+### ✅ Requirements
 
 * Python 3.10+
-* No additional libraries required (standard library only)
+* No external libraries needed (uses standard library only)
 
-### ▶️ Run Locally
+### ▶️ Run the Game
 
 ```bash
 python3 main.py
 ```
 
-If using Unix/Linux:
+For Unix/Linux users:
 
 ```bash
 chmod +x global_var_init.sh
@@ -59,31 +59,33 @@ python3 main.py
 
 ---
 
-## 📚 Gameplay Flow
+## 🎮 Gameplay Flow
 
-1. Welcome screen with loading animation
-2. User clicks to draw a card
-3. System selects a Pokémon and displays its name
-4. Game checks for duplicates
-5. Option to draw again or quit
+1. Launch the game (welcome screen appears)
+2. Click to draw a Pokémon card
+3. The game displays a random Pokémon name
+4. If it's a duplicate, you're notified
+5. Draw again or exit
 
 ---
 
-## 🌱 Future Enhancements
+## 🌟 Planned Improvements
 
-* 🖼️ Add Pokémon card images
-* 💾 Save drawn history to local file
-* 🌐 Integrate real-time Pokémon data API
-* 🏆 Add scoring and levels
+* 🖼️ Display official Pokémon card images
+* 💾 Save drawn history to file for later sessions
+* 🌐 Integrate real Pokémon data from an API
+* 🏆 Add scoring, streaks, or level-ups
 
 ---
 
 ## 📄 License
 
-MIT © 2025
+MIT License © 2025
 
 ---
 
-## 💬 Feedback
+## 💬 Feedback & Contributions
 
-Open an issue or share ideas for improvements!
+Found a bug or have a feature idea? Open an issue or submit a pull request!
+
+Thanks for playing! 🎉
